@@ -1,0 +1,10 @@
+<%= link_to 'All games', games_path %>
+
+<h1>Add a game</h1>
+
+<%= form_with model: @game, class: "games_form" do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.submit %>
+<% end %>

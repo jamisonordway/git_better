@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   get '/bosses', to: 'bosses#index', as: :bosses
   get '/bosses/new', to: 'bosses#new', as: :new_boss
   post 'bosses/new', to: 'bosses#create'
+
+  get '/games', to: 'games#index', as: :games
+  get '/games/new', to: 'games#new', as: :new_game
+  post 'games/new', to: 'games#create'
+  get '/games/:game_id/bosses', to: 'bosses#index'
 end
