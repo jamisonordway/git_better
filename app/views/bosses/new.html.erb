@@ -1,0 +1,13 @@
+<%= link_to 'All bosses', '/bosses' %>
+
+<h1>Add a boss</h1>
+
+<%= form_with model: @boss, class: "bosses_form" do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :difficulty %>
+  <%= f.number_field :difficulty %>
+
+  <%= f.submit %>
+<% end %>
