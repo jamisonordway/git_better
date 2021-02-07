@@ -1,0 +1,8 @@
+<%= link_to 'Back to homepage', '/' %>
+
+<h1>Games</h1>
+
+<% @games.each do |game| %>
+  <h3><%= game.title %></h3>
+  <h3><%= link_to "view bosses", "/games/#{game.id}/bosses" %></h3>
+<% end %>

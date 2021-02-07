@@ -1,4 +1,4 @@
-<%= link_to 'All bosses', '/bosses' %>
+<%= link_to 'All bosses', bosses_path %>
 
 <h1>Add a boss</h1>
 
@@ -8,6 +8,9 @@
 
   <%= f.label :difficulty %>
   <%= f.number_field :difficulty %>
+
+  <%= f.label :game %>
+  <%= f.collection_select(:game_id, @games, :id, :title, :prompt => 'Select') %>
 
   <%= f.submit %>
 <% end %>
